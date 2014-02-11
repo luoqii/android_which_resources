@@ -39,4 +39,27 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
+    defaultConfig {
+        versionName "v_gradle_bysong"
+    }
+    buildTypes {
+        debug {
+            packageNameSuffix ".debug"
+        }
+
+        jnidebug.initWith(buildTypes.debug)
+        jnidebug {
+            packageNameSuffix ".jnidebug"
+        }
+
+    }
+    productFlavors {
+        freeapp {
+            versionName "flavor_freeapp"    
+        }
+        paidapp {
+            versionName "flavor_paidapp"
+        }
+
+   }
 }
