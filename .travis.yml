@@ -1,4 +1,4 @@
-# copied from https://github.com/leviwilson/android-travis-ci-example
+# copied from https://github.com/luoqii/android-tdd-playground
 language: java
 jdk: oraclejdk7
 env:
