@@ -5,6 +5,7 @@ env:
   matrix:
     - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a
 before_install:
+  - ls -l > /dev/null
   - wget http://services.gradle.org/distributions/gradle-1.6-all.zip > /dev/null
   - echo yes | unzip gradle-1.6-all.zip  -d gradle-1.6 > /dev/null
   - export PATH=$PWD/gradle-1.6/bin:$PATH
