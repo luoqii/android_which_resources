@@ -7,7 +7,7 @@ env:
 before_install:
   - ls -l 
   - wget http://services.gradle.org/distributions/gradle-1.6-all.zip > /dev/null
-  - echo yes | unzip gradle-1.6-all.zip  -d gradle-1.6 > /dev/null
+  - echo yes | unzip -o gradle-1.6-all.zip  -d gradle-1.6 > /dev/null
   - export PATH=$PWD/gradle-1.6/bin:$PATH
 
   # Install base Android SDK
