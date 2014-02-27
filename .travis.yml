@@ -1,3 +1,4 @@
+# copied from https://github.com/leviwilson/android-travis-ci-example
 language: java
 jdk: oraclejdk7
 env:
@@ -23,12 +24,12 @@ before_install:
   - echo yes | android update sdk --filter extra-android-m2repository --no-ui --force > /dev/null
 
   # Create and start emulator
-  - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
-  - emulator -avd test -no-skin -no-audio -no-window &
+  #- echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
+  # - emulator -avd test -no-skin -no-audio -no-window &
 
 before_script:
-  - adb wait-for-device
-  - adb shell input keyevent 82 &
+  #- adb wait-for-device
+  #- adb shell input keyevent 82 &
 
 script:
-  - ./gradlew connectedInstrumentTest
+  - ./gradlew assemble
