@@ -5,8 +5,8 @@ env:
   matrix:
     - ANDROID_TARGET=android-19  ANDROID_ABI=armeabi-v7a
 before_install:
-  - wget http://services.gradle.org/distributions/gradle-1.6-all.zip
-  - unzip gradle-1.6-all.zip -d gradle-1.6
+  - wget http://services.gradle.org/distributions/gradle-1.6-all.zip > dev/null
+  - unzip gradle-1.6-all.zip -u -d gradle-1.6 > dev/null
   - export PATH=$PWD/gradle-1.6/bin:$PATH
 
   # Install base Android SDK
