@@ -59,4 +59,5 @@ before_install:
 install:
 
 script:
+   - gradle --version
    - gradle -s build
