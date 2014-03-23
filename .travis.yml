@@ -32,6 +32,11 @@ before_install:
     - android list sdk --extended 
     - android list sdk --extended --all
 
+    # use gradle 1.10
+    - wget http://services.gradle.org/distributions/gradle-1.9-all.zip
+    - unzip gradle-1.9-all.zip -d gradle > /dev/null
+    - export PATH=./gradle/gradle-1.10/bin/:$PATH
+
 #turn if off if you do NOT want expect's debug info 
     - DEBUG_EXPECT=-d
     - expect $DEBUG_EXPECT -c "spawn android --clear-cache -v update sdk --filter build-tools-19.0.3 --no-ui --force" android.update.sdk.expect
