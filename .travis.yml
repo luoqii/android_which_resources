@@ -65,4 +65,5 @@ install:
 
 script:
    - gradle --version
-   - gradle -s build
+# we do not need this, travis will do it for me if we have a build.gradle in project.
+#   - gradle -s build
